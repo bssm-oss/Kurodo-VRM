@@ -57,6 +57,35 @@ chrome.runtime.onMessage.addListener((message) => {
   }
 });
 
+document.querySelectorAll(".motion-slot").forEach((slotEl) => {
+  const slot     = slotEl.dataset.slot;
+  const input    = slotEl.querySelector(".motion-input");
+  const filename = slotEl.querySelector(".slot-filename");
+
+  input.addEventListener("change", async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    if (!VRMLoader.isLoaded) {
+      filename.textContent = "VRM을 먼저 로드하세요";
+      input.value = "";
+      return;
+    }
+
+    filename.textContent = "로딩 중...";
+    const url = URL.createObjectURL(file);
+
+    try {
+      await VRMLoader.loadMotion(slot, url);
+      filename.textContent = file.name;
+    } catch (err) {
+      console.error(`모션 로드 실패 [${slot}]:`, err);
+      filename.textContent = "로드 실패";
+      URL.revokeObjectURL(url);
+    }
+  });
+});
+
 modelInput.addEventListener("change", async (e) => {
   const file = e.target.files[0];
   if (!file) return;

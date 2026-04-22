@@ -173,7 +173,8 @@ body {
   gap: 5px;
 }
 
-#model-label { font-size: 11px; color: var(--text-muted); }
+#model-label,
+#motion-label { font-size: 11px; color: var(--text-muted); }
 
 #model-input {
   font-size: 11px;
@@ -184,6 +185,48 @@ body {
 #model-name {
   font-size: 11px;
   color: var(--accent2);
+}
+
+#motion-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#motion-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.motion-slot {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 6px;
+}
+
+.slot-name {
+  font-size: 11px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.motion-input {
+  font-size: 10px;
+  color: var(--text-muted);
+  cursor: pointer;
+  min-width: 0;
+}
+
+.slot-filename {
+  font-size: 10px;
+  color: var(--accent2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 90px;
+  text-align: right;
 }
 
 #footer {

@@ -37,6 +37,37 @@
         <input type="file" id="model-input" accept=".vrm" />
         <span id="model-name">없음</span>
       </div>
+
+      <div id="motion-row">
+        <label id="motion-label">모션 파일 (.vrma)</label>
+        <div id="motion-slots">
+          <div class="motion-slot" data-slot="idle">
+            <span class="slot-name">대기</span>
+            <input type="file" class="motion-input" accept=".vrma" />
+            <span class="slot-filename">없음</span>
+          </div>
+          <div class="motion-slot" data-slot="talking">
+            <span class="slot-name">말하기</span>
+            <input type="file" class="motion-input" accept=".vrma" />
+            <span class="slot-filename">없음</span>
+          </div>
+          <div class="motion-slot" data-slot="happy">
+            <span class="slot-name">기쁨</span>
+            <input type="file" class="motion-input" accept=".vrma" />
+            <span class="slot-filename">없음</span>
+          </div>
+          <div class="motion-slot" data-slot="surprised">
+            <span class="slot-name">놀람</span>
+            <input type="file" class="motion-input" accept=".vrma" />
+            <span class="slot-filename">없음</span>
+          </div>
+          <div class="motion-slot" data-slot="shy">
+            <span class="slot-name">수줍음</span>
+            <input type="file" class="motion-input" accept=".vrma" />
+            <span class="slot-filename">없음</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="footer">
@@ -50,7 +81,8 @@
     "imports": {
       "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
       "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/",
-      "@pixiv/three-vrm": "https://cdn.jsdelivr.net/npm/@pixiv/three-vrm@2.1.3/lib/three-vrm.module.js"
+      "@pixiv/three-vrm": "https://cdn.jsdelivr.net/npm/@pixiv/three-vrm@2.1.3/lib/three-vrm.module.js",
+      "@pixiv/three-vrm-animation": "https://cdn.jsdelivr.net/npm/@pixiv/three-vrm-animation@2.1.3/lib/three-vrm-animation.module.js"
     }
   }
   </script>
