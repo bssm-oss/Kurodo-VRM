@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "VRM Buddy",
+  "name": "Kurodo-VRM",
   "version": "0.1.0",
   "description": "AI 답변 옆에 VRM 캐릭터를 붙여주는 크롬 익스텐션",
 
@@ -41,7 +41,7 @@
   },
 
   "action": {
-    "default_title": "VRM Buddy 열기",
+    "default_title": "Kurodo-VRM 열기",
     "default_icon": {
       "16": "assets/icon16.png",
       "48": "assets/icon48.png",
