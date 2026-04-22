@@ -17,7 +17,9 @@
     </header>
 
     <div id="viewport">
-      <canvas id="avatar-canvas"></canvas>
+      <div id="no-avatar">
+        <span>VRM 파일을 불러오세요</span>
+      </div>
       <div id="vrm-viewport" class="hidden"></div>
       <div id="speech-bubble" class="hidden"></div>
     </div>
@@ -33,7 +35,7 @@
       <div id="model-row">
         <label id="model-label">모델 파일 (.vrm)</label>
         <input type="file" id="model-input" accept=".vrm" />
-        <span id="model-name">기본 아바타 사용 중</span>
+        <span id="model-name">없음</span>
       </div>
     </div>
 
@@ -52,7 +54,6 @@
     }
   }
   </script>
-  <script src="avatar.js"></script>
   <script type="module" src="panel.js"></script>
 </body>
 </html>

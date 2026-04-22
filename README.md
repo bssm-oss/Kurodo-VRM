@@ -11,9 +11,7 @@ AI가 답변하는 동안 캐릭터가 입을 벙긋대고, 내용에 따라 표
 
 - **실시간 립싱크** — AI가 타이핑하는 동안 캐릭터 입이 움직임
 - **감정 감지** — "기쁘다", "놀랍다", "귀엽다" 같은 키워드를 읽고 표정 자동 변경
-- **마우스 트래킹** — 커서 따라 고개랑 눈동자가 자연스럽게 따라옴
-- **VRM 파일 로드** — 내 VRM 모델 파일을 직접 불러올 수 있음 (Three.js + @pixiv/three-vrm)
-- **Canvas 기본 아바타** — VRM 없어도 귀여운 기본 캐릭터로 대기 중
+- **VRM 파일 로드** — 내 VRM 모델 파일(.vrm)을 직접 불러와서 사용 (Three.js + @pixiv/three-vrm)
 
 지원 사이트: `claude.ai` / `chatgpt.com` / `gemini.google.com`
 
@@ -33,15 +31,17 @@ AI가 답변하는 동안 캐릭터가 입을 벙긋대고, 내용에 따라 표
 
 1. Claude / ChatGPT / Gemini 접속
 2. 툴바에서 Kurodo-VRM 아이콘 클릭 → 사이드패널 열림
-3. AI한테 뭐든 물어보면 캐릭터가 반응
-4. 내 VRM 파일이 있으면 하단 **모델 파일 (.vrm)** 에서 불러오기
+3. 하단 **모델 파일 (.vrm)** 에서 내 VRM 파일 불러오기
+4. AI한테 뭐든 물어보면 캐릭터가 반응
+
+> VRM 파일 없이는 아바타가 표시되지 않습니다.
 
 ---
 
 ## 로드맵
 
-- [x] Canvas 기본 아바타 (립싱크, 감정, 눈 추적)
 - [x] VRM 파일 로드 (Three.js + @pixiv/three-vrm)
+- [x] 블렌드쉐이프 기반 표정 / 립싱크
 - [ ] Web Speech API TTS 연동
 - [ ] ElevenLabs TTS + 정밀 립싱크 (Web Audio API)
 - [ ] 모델 파일 로컬 저장 (재시작해도 유지)
@@ -62,7 +62,6 @@ vrm_for_ai/
 ├── sidepanel/
 │   ├── index.html
 │   ├── style.css
-│   ├── avatar.js             # Canvas 기본 아바타
 │   ├── vrm-loader.js         # Three.js VRM 로더
 │   └── panel.js              # 패널 메인 로직
 └── assets/
