@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VRM Buddy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="header">
+      <span id="title">VRM Buddy</span>
+      <div id="status-wrap">
+        <div id="status-dot"></div>
+        <span id="status-text">대기 중</span>
+      </div>
+    </header>
+
+    <div id="viewport">
+      <canvas id="avatar-canvas"></canvas>
+      <div id="vrm-viewport" class="hidden"></div>
+      <div id="speech-bubble" class="hidden"></div>
+    </div>
+
+    <div id="controls">
+      <div id="emotion-row">
+        <button class="emo-btn active" data-emotion="normal">보통</button>
+        <button class="emo-btn" data-emotion="happy">기쁨</button>
+        <button class="emo-btn" data-emotion="surprised">놀람</button>
+        <button class="emo-btn" data-emotion="shy">수줍음</button>
+      </div>
+
+      <div id="model-row">
+        <label id="model-label">모델 파일 (.vrm)</label>
+        <input type="file" id="model-input" accept=".vrm" />
+        <span id="model-name">기본 아바타 사용 중</span>
+      </div>
+    </div>
+
+    <div id="footer">
+      <span>VRM Buddy v0.1.0</span>
+      <a href="https://github.com/your-repo/vrm-buddy" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/",
+      "@pixiv/three-vrm": "https://cdn.jsdelivr.net/npm/@pixiv/three-vrm@2.1.3/lib/three-vrm.module.js"
+    }
+  }
+  </script>
+  <script src="avatar.js"></script>
+  <script type="module" src="panel.js"></script>
+</body>
+</html>

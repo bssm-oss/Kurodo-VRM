@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# 패키징 결과물
+*.zip
+
+# 테스트용 VRM 모델 파일 (저장소에 올리지 않음)
+*.vrm
+
+# 혹시 npm을 쓰게 될 경우
+node_modules/
