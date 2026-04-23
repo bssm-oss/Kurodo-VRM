@@ -36,10 +36,6 @@
     "default_path": "sidepanel/index.html"
   },
 
-  "content_security_policy": {
-    "extension_pages": "script-src 'self' https://cdn.jsdelivr.net; object-src 'self'"
-  },
-
   "action": {
     "default_title": "Kurodo-VRM 열기",
     "default_icon": {

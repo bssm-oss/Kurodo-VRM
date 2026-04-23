@@ -1,6 +1,9 @@
 # macOS
 .DS_Store
 
+# 번들된 외부 라이브러리 (설치 스크립트로 생성)
+sidepanel/lib/
+
 # 패키징 결과물
 *.zip
 

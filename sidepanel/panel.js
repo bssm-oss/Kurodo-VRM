@@ -27,14 +27,6 @@ function setStatus(mode) {
   }
 }
 
-document.querySelectorAll(".emo-btn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".emo-btn").forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-    if (VRMLoader.isLoaded) VRMLoader.setEmotion(btn.dataset.emotion);
-  });
-});
-
 chrome.runtime.onMessage.addListener((message) => {
   if (message.type === "AVATAR_UPDATE") {
     const { emotion, fullText } = message.payload;
@@ -43,11 +35,6 @@ chrome.runtime.onMessage.addListener((message) => {
       VRMLoader.startTalking();
     }
     setStatus("talking");
-
-    document.querySelectorAll(".emo-btn").forEach((b) => {
-      b.classList.toggle("active", b.dataset.emotion === emotion);
-    });
-
     showBubble(fullText.slice(0, 60) + (fullText.length > 60 ? "..." : ""));
   }
 
